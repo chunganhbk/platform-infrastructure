@@ -36,13 +36,3 @@ module "experience_logging_secrets" {
 
   secrets = local.logging_secrets
 }
-
-module "digirati_logging_secrets" {
-  source = "./modules/secrets/distributed"
-
-  providers = {
-    aws = aws.digirati
-  }
-
-  secrets = local.logging_secrets
-}
